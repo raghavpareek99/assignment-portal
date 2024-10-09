@@ -7,7 +7,7 @@ const authController = require('../controllers/authController');
 
 router.post('/upload', auth, assignmentController.uploadAssignment);
 router.get('/admins', auth, assignmentController.getAssignmentsForAdmin);
-router.get('/assignments', auth, assignmentController.getAssignmentsForAdmin);  // Make sure this line calls the correct function
+router.get('/assignments', auth, assignmentController.getAssignmentsForAdmin);  
 router.post('/assignments/:id/accept', auth, assignmentController.acceptAssignment);
 router.post('/assignments/:id/reject', auth, assignmentController.rejectAssignment);
 router.post('/register', authController.register);
