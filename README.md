@@ -5,17 +5,17 @@
 The Assignment Submission Portal is a full-stack web application built using Node.js, Express.js, MongoDB, and React. It facilitates efficient submission and management of assignments between users and administrators. Users can upload their tasks, and administrators can review, accept, or reject submissions.
 
 ## 🚀 Features
-User Authentication: Secure registration and login for users and admins.
-Role-Based Access Control: Different permissions for users and admins.
-Assignment Management:
-Users can submit assignments.
-Admins can view, accept, or reject submitted assignments.
-API Endpoints: Comprehensive set of RESTful APIs to interact with the system.
-MongoDB Integration: Efficient storage and retrieval of user and assignment data.
+1. User Authentication: Secure registration and login for users and admins.<br>
+2. Role-Based Access Control: Different permissions for users and admins.<br>
+3. Assignment Management: Users can submit assignments. Admins can view, accept, or reject submitted assignments.<br>
+4. API Endpoints: Comprehensive set of RESTful APIs to interact with the system.<br>
+5. MongoDB Integration: Efficient storage and retrieval of user and assignment data.<br>
 
 ## 🛠️ Technologies Used
-Backend: Node.js, Express.js, MongoDB, Mongoose
-Environment Variables: dotenv
+1. Backend: Node.js, Express.js, MongoDB, Mongoose<br>
+2. Authentication: JWT<br>
+3. Environment Variables: dotenv<br>
+4. Testing: Postman
 
 ## 📂 Project Structure
 
@@ -42,12 +42,12 @@ Environment Variables: dotenv
 
 ## 📦 Installation and Setup
 
-Follow these instructions to set up and run the project on your local machine.
+Follow these instructions to set up and run the project on local machine.
 
 Prerequisites
-Node.js 
-MongoDB Atlas
-Git
+1. Node.js 
+2. MongoDB Atlas
+3. Git
 
 ### Setup
 1. Install dependencies:
@@ -67,8 +67,6 @@ Git
    The server will start on http://localhost:5000.
 
 ## 🛠️ API Endpoints
-
-## API Endpoints
 
 ### Authentication Routes
 
@@ -96,6 +94,67 @@ The following environment variables are required for the application to run:
 
 MONGODB_URI: The URI to connect to MongoDB.
 JWT_SECRET: Secret key for signing JWT tokens.
+
+## Testing using Postman
+
+### Register an Admin:
+Method: POST
+URL: http://localhost:5000/api/auth/register
+```
+{
+    "name": "Admin2",
+    "email": "admin2@example.com",
+    "password": "password123",
+    "role": "admin"
+}
+```
+### Register an User:
+Method: POST
+URL: http://localhost:5000/api/auth/register
+```
+{
+    "name": "User2",
+    "email": "user2@example.com",
+    "password": "password123",
+    "role": "admin"
+}
+```
+### Log in as User/Admin:
+Set up your request to log in as a user:
+Method: POST
+URL: http://localhost:5000/api/auth/login
+```
+{
+    "email": "user2@example.com",
+    "password": "password123"
+}
+```
+### Upload an Assignment:
+Method: POST
+URL: http://localhost:5000/api/assignments/upload<br>
+Headers: Add a header for x-auth-token and paste the token you copied.
+```
+{
+    "task": "Hello World",
+    "admin": "admin2@example.com"
+}
+```
+### View Assignments as Admin:
+Method: GET
+URL: http://localhost:5000/api/assignments<br>
+Headers: Add a header for x-auth-token and paste the admin token.
+
+### Accept an Assignment:
+Method: POST
+URL: http://localhost:5000/api/assignments/{id}/accept<br>
+Headers: Add a header for x-auth-token and paste the admin token.
+
+### Reject an Assignment:
+Method: POST
+URL: http://localhost:5000/api/assignments/{id}/reject <br>
+Headers: Add a header for x-auth-token and paste the admin token.
+
+![image](https://github.com/user-attachments/assets/3b33ded0-19d2-4710-b46c-069dc11afa1a)
 
 ## 👤 Role Management
 Admin: Has access to review, accept, or reject assignments and manage users.
