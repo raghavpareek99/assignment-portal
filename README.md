@@ -66,6 +66,11 @@ Prerequisites
    ```
    The server will start on http://localhost:5000.
 
+5. Setup on MongoDB:
+  ![image](https://github.com/user-attachments/assets/8708ba52-bb6a-4347-9203-4f31df5b3880)
+
+
+
 ## 🛠️ API Endpoints
 
 ### Authentication Routes
