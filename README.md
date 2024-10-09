@@ -162,7 +162,7 @@ Headers: Add a header for x-auth-token and paste the admin token.
 ![image](https://github.com/user-attachments/assets/3b33ded0-19d2-4710-b46c-069dc11afa1a)
 
 ## 👤 Role Management
-Admin: Has access to review, accept, or reject assignments and manage users.
+Admin: Has access to review, accept, or reject assignments and manage users.<br>
 User: Can upload assignments and view their status.
 
 ## 📧 Contact
