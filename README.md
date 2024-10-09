@@ -102,8 +102,8 @@ Method: POST
 URL: http://localhost:5000/api/auth/register
 ```
 {
-    "name": "Admin2",
-    "email": "admin2@example.com",
+    "name": "Admin1",
+    "email": "admin1@example.com",
     "password": "password123",
     "role": "admin"
 }
@@ -113,8 +113,8 @@ Method: POST
 URL: http://localhost:5000/api/auth/register
 ```
 {
-    "name": "User2",
-    "email": "user2@example.com",
+    "name": "User1",
+    "email": "user1@example.com",
     "password": "password123",
     "role": "admin"
 }
@@ -125,7 +125,7 @@ Method: POST
 URL: http://localhost:5000/api/auth/login
 ```
 {
-    "email": "user2@example.com",
+    "email": "user1@example.com",
     "password": "password123"
 }
 ```
@@ -136,7 +136,7 @@ Headers: Add a header for x-auth-token and paste the token you copied.
 ```
 {
     "task": "Hello World",
-    "admin": "admin2@example.com"
+    "admin": "admin1@example.com"
 }
 ```
 ### View Assignments as Admin:
