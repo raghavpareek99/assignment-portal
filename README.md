@@ -166,5 +166,5 @@ Admin: Has access to review, accept, or reject assignments and manage users.<br>
 User: Can upload assignments and view their status.
 
 ## 📧 Contact
-Email: raghavpareek48@gmail.com
+Email: raghavpareek48@gmail.com<br>
 Phone Number: 9772241194
