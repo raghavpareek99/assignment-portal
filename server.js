@@ -2,11 +2,11 @@
 const express = require('express');
 const connectDB = require('./config/db');
 const dotenv = require('dotenv');
+const app = express();
 
 // Load environment variables
 dotenv.config();
 console.log("MONGODB_URI:", process.env.MONGODB_URI);
-const app = express();
 
 // Connect Database
 connectDB();
