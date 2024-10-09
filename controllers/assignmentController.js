@@ -71,7 +71,7 @@ exports.rejectAssignment = async (req, res) => {
     }
 };
 
-exports.getAllAdmins = async (req, res) => {  // New function to fetch all admins
+exports.getAllAdmins = async (req, res) => {  
     try {
         const admins = await User.find({ role: 'admin' }).select('name email');
         res.json(admins);
